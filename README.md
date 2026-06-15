@@ -1,1 +1,1 @@
-# conda-environments-project-mgmt
+# conda-maintainers-team-planning
