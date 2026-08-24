@@ -2,6 +2,8 @@
 [how-we-use-github]: https://github.com/conda/conda/blob/main/HOW_WE_USE_GITHUB.md#code-review-and-merging
 [rapid]: https://cio-wiki.org/wiki/RAPID_Approach
 [rfc7282]: https://www.rfc-editor.org/rfc/rfc7282
+[cep-9]: https://github.com/conda/ceps/blob/main/cep-0009.md
+[contributing]: https://github.com/conda/conda/blob/main/CONTRIBUTING.md
 
 # Decision Making for conda Maintainers
 
@@ -77,7 +79,7 @@ GitHub — Code Review and Merging][how-we-use-github].
 
 ### Tier 2 — Feature-level architectural decisions
 
-Changes that affect solver behavior, plugin APIs, [deprecation schedules](deprecations),
+Changes that affect solver behavior, plugin APIs, [deprecation schedules][cep-9],
 cross-platform behavior, or other areas with ecosystem-wide impact. The feature
 owner is R, affected community tool authors and maintainers are I, senior
 maintainers are A on PRs, and the feature owner is D for implementation
@@ -193,6 +195,6 @@ accordingly.
 
 - [conda governance][governance] — Project Team membership, voting procedures
 - [RAPID Approach][rapid] — Background on the Recommend, Agree, Perform, Input, Decide roles
-- [Contributing](contributing) — PR and code review process
+- [Contributing][contributing] — PR and code review process
 - [How We Use GitHub — Code Review and Merging][how-we-use-github] — GitHub
   workflow and review requirements
