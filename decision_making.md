@@ -5,10 +5,9 @@
 
 # Decision Making for conda Maintainers
 
-:::{note}
-This page is intended for current and prospective members of the
-**conda-maintainers** team, not for all contributors.
-:::
+> [!NOTE]
+> This page is intended for current and prospective members of the
+> **conda-maintainers** team, not for all contributors.
 
 This page describes how the conda-maintainers team makes decisions on the
 repositories they maintain, including conda. For background on conda Organization
@@ -122,12 +121,11 @@ Two things that are **not** rough consensus:
 If a PR author and reviewer cannot reach agreement after good-faith discussion,
 either party may call an escalation meeting with the conda-maintainers team.
 
-:::{important}
-Nothing in this process should be prioritized above the
-[Conda Code of Conduct](https://github.com/conda/governance/blob/main/CODE_OF_CONDUCT.md).
-If there is a conflict with the Code of Conduct, that takes precedence. If there is
-a code of conduct concern, it must be resolved first before proceeding with the technical decision.
-:::
+> [!IMPORTANT]
+> Nothing in this process should be prioritized above the
+> [Conda Code of Conduct](https://github.com/conda/governance/blob/main/CODE_OF_CONDUCT.md).
+> If there is a conflict with the Code of Conduct, that takes precedence. If there is
+> a code of conduct concern, it must be resolved first before proceeding with the technical decision.
 
 ### Step 1 — Reframe objections on the PR
 
@@ -154,7 +152,7 @@ Tag `@conda-maintainers` and coordinate a meeting time that works for the team
 while being considerate of global time-zones. The feature owner attends if the
 PR is part of an active feature.
 
-### Step 3 — Hold the meeting
+### Step 3 — Hold the session
 
 The meeting facilitator (typically the feature owner, or the most senior
 maintainer present) should:
