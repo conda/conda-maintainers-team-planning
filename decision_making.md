@@ -151,7 +151,7 @@ a thread in `#conda-maintainers` on Zulip with:
 A session could consist of one of the following:
 1. A synchronous meeting via video call or chat
 2. An extended asynchronous thread in Zulip
-3. 1:1 discussions with the session facilitator
+3. 1:1 discussions with the session chair
 
 Tag `@conda-maintainers`. If the discussion is synchronous, make sure to coordinate
 a session time that works for the team while being considerate of global time-zones.
@@ -159,7 +159,7 @@ The feature owner attends if the PR is part of an active feature.
 
 ### Step 3 — Hold the session
 
-The session facilitator (typically the feature owner, or the most senior
+The session chair (typically the feature owner, or the most senior
 maintainer present) should:
 
 - Ask each party to state their technical objection specifically, not re-argue
@@ -171,7 +171,7 @@ maintainer present) should:
 - Declare rough consensus when all technical blockers have been addressed, even
   if not everyone prefers the chosen solution
 
-The facilitator does not need unanimity to declare rough consensus. A strong
+The chair does not need unanimity to declare rough consensus. A strong
 majority with no unaddressed technical blockers is sufficient.
 
 ### Step 4 — Record the outcome on the PR
