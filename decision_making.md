@@ -151,7 +151,8 @@ a thread in `#conda-maintainers` on Zulip with:
 A session could consist of one of the following:
 1. A synchronous meeting via video call or chat
 2. An extended asynchronous thread in Zulip
-3. 1:1 discussions with the session chair
+3. 1:1 discussions with the session chair — these gather input and count
+   toward participation, but consensus is still declared per Step 3
 
 Tag `@conda-maintainers`. If the discussion is synchronous, make sure to coordinate
 a session time that works for the team while being considerate of global time-zones.
@@ -170,9 +171,16 @@ maintainer present) should:
   can be set aside
 - Declare rough consensus when all technical blockers have been addressed, even
   if not everyone prefers the chosen solution
+- Only declare rough consensus when at least three conda-maintainers, including
+  the chair, have participated — via the session, the async thread, or a 1:1
+  with the chair
+- If fewer than three have participated, keep the question on the async
+  `#conda-maintainers` thread. The chair may declare consensus no earlier than
+  7 days after the thread's initial post
 
-The chair does not need unanimity to declare rough consensus. A strong
-majority with no unaddressed technical blockers is sufficient.
+With this participation floor met, the chair does not need unanimity to
+declare rough consensus. A strong majority with no unaddressed technical
+blockers is sufficient.
 
 ### Step 4 — Record the outcome on the PR
 
