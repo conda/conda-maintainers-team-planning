@@ -139,22 +139,27 @@ This separates genuine blockers from unappealing-but-acceptable tradeoffs. If th
 objection is that the solution is not ideal but workable, that is not a blocker
 — rough consensus has been reached.
 
-### Step 2 — Signal the impasse and schedule a meeting
+### Step 2 — Signal the impasse and start a session
 
 If the objection remains unresolved after Step 1, either party adds a comment on
-the PR stating the review is at an impasse. The person calling the meeting opens
+the PR stating the review is at an impasse. The person calling the session opens
 a thread in `#conda-maintainers` on Zulip with:
 
 - A link to the PR
 - A one-sentence neutral summary of the unresolved technical question
 
-Tag `@conda-maintainers` and coordinate a meeting time that works for the team
-while being considerate of global time-zones. The feature owner attends if the
-PR is part of an active feature.
+A session could consist of one of the following:
+1. A synchronous meeting via video call or chat
+2. An extended asynchronous thread in Zulip
+3. 1:1 discussions with the session facilitator
+
+Tag `@conda-maintainers`. If the discussion is synchronous, make sure to coordinate
+a session time that works for the team while being considerate of global time-zones.
+The feature owner attends if the PR is part of an active feature.
 
 ### Step 3 — Hold the session
 
-The meeting facilitator (typically the feature owner, or the most senior
+The session facilitator (typically the feature owner, or the most senior
 maintainer present) should:
 
 - Ask each party to state their technical objection specifically, not re-argue
@@ -171,7 +176,7 @@ majority with no unaddressed technical blockers is sufficient.
 
 ### Step 4 — Record the outcome on the PR
 
-Whoever called the meeting posts a comment on the PR summarising the decision
+Whoever called the session posts a comment on the PR summarising the decision
 and the reasoning — specifically noting how any technical objections were
 addressed or why they were determined not to be blockers. The PR then proceeds
 accordingly.
