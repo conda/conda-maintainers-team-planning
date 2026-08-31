@@ -17,16 +17,13 @@ New members may join through the Conda Governance [nomination process](https://g
 
 ## Members
 
-- @beeankha
 - @chenghlee
 - @danyeaw
 - @dholth
 - @ForgottenProgramme
-- @george-lorch
 - @jaimergp
 - @jezdez
 - @kenodegard
-- @mbargull
 - @ryanskeith
 - @soapy1
 - @travishathaway
@@ -35,7 +32,10 @@ New members may join through the Conda Governance [nomination process](https://g
 
 Members that are inactive (commits, GitHub comments/issues/reviews, dev meetings, and voting on polls) in the past six months will be asked if they want to become Emeritus members. One week after asking, if the inactive member has not responded, they will be automatically moved to emeritus status. Any member can also request to become Emeritus if they wish to do so (e.g. taking a sabbatical or long vacation). Members can be brought back to active membership at anytime. Emeritus members no longer have maintainer access on repositories.
 
+- @beeankha
+- @george-lorch
 - @jjhelmus
+- @mbargull
 
 ## Special Roles
 
