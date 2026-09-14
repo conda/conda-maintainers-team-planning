@@ -2,6 +2,10 @@
 
 This repo is for managing planning for the conda-maintainers team in order to capture issues and documentation across repositories that we work on.
 
+## Documentation
+
+Team documentation lives in [docs/](docs/README.md).
+
 ## conda-maintainers
 
 Maintainers of conda and related core plugins
