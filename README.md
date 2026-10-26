@@ -43,7 +43,7 @@ Members that are inactive (commits, GitHub comments/issues/reviews, dev meetings
 
 ## Special Roles
 
-**Technical Lead** - Leads major architectural decisions (solver behavior, plugin APIs, deprecation schedules, cross-platform behavior). Escalation facilitator when lower level disputes can't reach rough consensus at the PR level. Must agree on feature-level technical requirements and designs before they are finalized.
+**Technical Lead** - Leads major architectural decisions (solver behavior, plugin APIs, deprecation schedules, cross-platform behavior). Escalation facilitator when lower level disputes can't reach rough consensus at the PR level. Must agree on feature-level technical requirements and designs before they are finalized. Designates an acting Technical Lead when unavailable.
 - @jezdez
 
 **Planning Lead** - Helps define the roadmap, PI objectives, and release sequencing across conda/conda-maintainers projects. Assigns and rotates Feature Owners from the members for major initiatives.

@@ -42,10 +42,18 @@ decision needs consensus from everyone.
   and other maintainers provide Input through GitHub issues and PR threads.
 - **Decide (D):** Single accountable decision-maker for this decision type. For
   in-scope technical decisions on a feature, this is the feature owner. For
-  major architectural decisions with ecosystem impact, this is the technical
-  lead on the conda-maintainers team.
+  major architectural decisions with ecosystem impact, this is the Technical
+  Lead.
 
-## The Feature Owner Role
+## The Technical Lead role
+
+The Technical Lead is a named role held by one conda-maintainer. The
+team README lists who currently holds it. The Technical Lead holds Agree for
+Tier 2 feature-level architectural decisions and chairs escalation sessions.
+When the Technical Lead is unavailable, they designate an acting Technical Lead
+in the PR or the Zulip thread before the session starts.
+
+## The feature owner role
 
 For larger features or epics, the conda-maintainers assign a feature owner: a
 rotating conda-maintainer who is accountable for that feature's requirements,
@@ -79,11 +87,11 @@ requirement. See [How We Use GitHub: Code Review and Merging][how-we-use-github]
 
 Changes that affect solver behavior, plugin APIs, [deprecation schedules][cep-9],
 cross-platform behavior, or other areas with ecosystem-wide impact. The feature
-owner is R, affected community tool authors and maintainers are I, senior
-maintainers are A on PRs, and the feature owner is D for implementation
+owner is R, affected community tool authors and maintainers are I, the
+Technical Lead is A on PRs, and the feature owner is D for implementation
 decisions.
 
-## Input vs. Agree
+## Input vs. agree
 
 In shared-ownership projects, it is easy to treat every reviewer comment as a
 potential veto. Only the assigned reviewer holds Agree and can block a merge.
@@ -97,12 +105,12 @@ using the process below rather than leaving it open indefinitely.
 Review mechanics (when to use Request Changes instead of Comment) are covered in
 [How We Use GitHub: Code Review and Merging][how-we-use-github].
 
-## Escalation Process
+## Escalation process
 
 Conda-maintainers follow the IETF's principle of rough consensus ([RFC
-7282][rfc7282]). The goal is not to make everyone happy, and it is not a
-majority vote. The goal is that all technical objections have been heard and
-either addressed or found not to be blockers.
+7282][rfc7282]). Rough consensus does not mean everyone is happy, and it is not
+a majority vote. It means every technical objection has been heard and either
+addressed or found not to be a blocker.
 
 > "Consensus is when everyone is sufficiently satisfied with the chosen
 > solution, such that they no longer have specific objections to it." (RFC 7282)
@@ -152,13 +160,13 @@ A session can be any of the following:
    participation, though consensus is still declared per Step 3
 
 Tag `@conda-maintainers`. For a synchronous discussion, coordinate a session
-time that works for the team and takes global time zones into account. The
-feature owner attends if the PR is part of an active feature.
+time that works for the team and takes global time zones into account.
 
 ### Step 3: Hold the session
 
-The session chair (typically the feature owner, or the most senior maintainer
-present) should:
+The session chair is the Technical Lead, or the acting Technical Lead they
+designated. The feature owner attends if the PR is part of an active feature.
+The chair should:
 
 - Ask each party to state their technical objection specifically, without
   re-arguing the full history
@@ -185,7 +193,7 @@ and the reasoning, specifically noting how any technical objections were
 addressed or why they were judged not to be blockers. The PR then proceeds
 accordingly.
 
-## Further Reading
+## Further reading
 
 - [conda governance][governance]: project team membership and voting procedures
 - [RAPID Approach][rapid]: background on the Recommend, Agree, Perform, Input,
