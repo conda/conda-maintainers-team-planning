@@ -2,6 +2,7 @@
 [how-we-use-github]: https://github.com/conda/conda/blob/main/HOW_WE_USE_GITHUB.md#code-review-and-merging
 [rapid]: https://cio-wiki.org/wiki/RAPID_Approach
 [rfc7282]: https://www.rfc-editor.org/rfc/rfc7282
+[project-roadmap]: https://github.com/orgs/conda/projects/22/views/15
 [cep-9]: https://github.com/conda/ceps/blob/main/cep-0009.md
 [contributing]: https://github.com/conda/conda/blob/main/CONTRIBUTING.md
 
@@ -55,14 +56,13 @@ in the PR or the Zulip thread before the session starts.
 
 ## The feature owner role
 
-For larger features or epics, the conda-maintainers assign a feature owner: a
-rotating conda-maintainer who is accountable for that feature's requirements,
-plan, and execution. The feature owner does not do all the work
-themselves.
+Each Epic that reaches Near on the Roadmap board is assigned a feature owner: a
+rotating conda-maintainer who is accountable for that Epic's requirements, plan,
+and execution. The feature owner does not do all the work themselves.
 
 The feature owner:
 
-- Holds R and D for the duration of the feature
+- Holds R and D for the duration of the Epic
 - Opens and drives the GitHub issue discussion to gather community Input before
   work begins
 - Makes in-scope technical decisions during execution without requiring
@@ -71,7 +71,25 @@ The feature owner:
 The role rotates across conda-maintainers so that more people get experience
 making these decisions.
 
-## Decision Tiers
+## Feature owner assignment
+
+Anyone can create an Epic, but only Epics on the [Roadmap board][project-roadmap]
+are planned features. The Planning Lead assigns a feature owner when an Epic moves
+from Later to Near on the board. Epics that are off the board or stay in Later
+do not get a feature owner. Assignment happens asynchronously on the Epic's
+GitHub issue.
+
+1. The Planning Lead comments on the Epic and posts a call for volunteers in
+   `#conda-maintainers` on Zulip.
+2. Any conda-maintainer can volunteer by commenting on the Epic within five
+   business days.
+3. If several people volunteer, the Planning Lead picks the one who has led the
+   fewest Epics recently. If nobody volunteers, the Planning Lead assigns a
+   conda-maintainer directly, using the same rule.
+4. The Planning Lead sets the feature owner as the Epic's assignee. The feature
+   owner confirms by commenting on the Epic.
+
+## Decision tiers
 
 ### Tier 1: PR and story-level decisions
 
