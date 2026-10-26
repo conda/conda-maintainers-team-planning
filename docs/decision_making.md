@@ -1,10 +1,10 @@
 [governance]: https://github.com/conda/governance
-[how-we-use-github]: https://github.com/conda/conda/blob/main/HOW_WE_USE_GITHUB.md#code-review-and-merging
 [rapid]: https://cio-wiki.org/wiki/RAPID_Approach
 [rfc7282]: https://www.rfc-editor.org/rfc/rfc7282
 [project-roadmap]: https://github.com/orgs/conda/projects/22/views/15
 [cep-9]: https://github.com/conda/ceps/blob/main/cep-0009.md
 [contributing]: https://github.com/conda/conda/blob/main/CONTRIBUTING.md
+[development-process]: development_process.md
 
 # Decision Making for conda Maintainers
 
@@ -33,9 +33,9 @@ decision needs consensus from everyone.
   drives the plan. For features, this is the feature owner. For smaller changes,
   this is the PR author.
 - **Agree (A):** Must approve before the decision is final. For PRs, this is
-  the reviewer the PR author identified ahead of time, ideally someone they
-  worked with during development. Keep this group small. Other commenters on a
-  PR are giving Input, not Agree.
+  an approving maintainer reviewer, preferably someone the PR author worked with
+  during development. Keep this group small. Other commenters on a PR are giving
+  Input, not Agree.
 - **Perform (P):** Executes the decision. Often the whole team or a subset of
   contributors. Because ownership is shared, most engineers are in this role on
   most features.
@@ -94,13 +94,13 @@ GitHub issue.
 
 ### Tier 1: PR and story-level decisions
 
-Most changes fall here. The PR author is R, the reviewer they identified ahead
-of time is A, and the approving reviewer merges. Community members commenting on
-the PR are providing Input.
+Most changes fall here. The PR author is R, an approving maintainer reviewer is
+A, and that reviewer merges. Community members commenting on the PR are
+providing Input.
 
-Request a review from the person you identified ahead of time to work with. If
-you paired with them during development, continuous review counts as this
-requirement. See [How We Use GitHub: Code Review and Merging][how-we-use-github].
+Request a review from a maintainer, preferably the person you worked with during
+development. See [Development Process][development-process] for the review
+rules.
 
 ### Tier 2: Feature-level architectural decisions
 
@@ -122,7 +122,7 @@ and reviewer cannot resolve a disagreement between themselves, escalate it
 using the process below rather than leaving it open indefinitely.
 
 Review mechanics (when to use Request Changes instead of Comment) are covered in
-[How We Use GitHub: Code Review and Merging][how-we-use-github].
+[Development Process][development-process].
 
 ## Escalation process
 
@@ -223,5 +223,5 @@ accordingly.
 - [RAPID Approach][rapid]: background on the Recommend, Agree, Perform, Input,
   and Decide roles
 - [Contributing][contributing]: PR and code review process
-- [How We Use GitHub: Code Review and Merging][how-we-use-github]: GitHub
-  workflow and review requirements
+- [Development Process][development-process]: issue sorting, labeling, and code
+  review and merging
