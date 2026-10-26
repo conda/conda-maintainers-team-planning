@@ -8,24 +8,23 @@
 # Decision Making for conda Maintainers
 
 > [!NOTE]
-> This page is intended for current and prospective members of the
+> This page is for current and prospective members of the
 > **conda-maintainers** team, not for all contributors.
 
 This page describes how the conda-maintainers team makes decisions on the
-repositories they maintain, including conda. For background on conda Organization
-governance (Steering Council, project team membership, voting), see the
+repositories they maintain, including conda. Conda Organization governance
+(Steering Council, project team membership, voting) is covered in the
 [conda governance repository][governance].
 
 ## Principles
 
-The conda-maintainers uses a lightweight version of the [RAPID framework][rapid] to keep
-decisions clear and avoid both bottlenecks and diffusion of accountability. The
-core idea is that every significant decision has a named owner, a defined set of
-people who must agree before it proceeds, and a defined set of people whose
-input is sought but who cannot block it.
+The conda-maintainers use a lightweight version of the [RAPID framework][rapid].
+Every significant decision gets a named owner, a small set of people who must
+agree before it proceeds, and a set of people whose input is sought but who
+cannot block it.
 
-Shared codebase ownership means everyone can contribute anywhere. It does not
-mean every decision requires consensus from everyone.
+Everyone can contribute anywhere in a shared codebase. That does not mean every
+decision needs consensus from everyone.
 
 ## Roles
 
@@ -33,24 +32,24 @@ mean every decision requires consensus from everyone.
   drives the plan. For features, this is the feature owner. For smaller changes,
   this is the PR author.
 - **Agree (A):** Must approve before the decision is final. For PRs, this is
-  the reviewer the PR author identified ahead of time — ideally someone they
-  collaborated with during development. Kept deliberately small — additional
-  commenters on a PR are giving Input, not Agree.
+  the reviewer the PR author identified ahead of time, ideally someone they
+  worked with during development. Keep this group small. Other commenters on a
+  PR are giving Input, not Agree.
 - **Perform (P):** Executes the decision. Often the whole team or a subset of
-  contributors. Shared ownership means most engineers are in this role on most
-  features.
+  contributors. Because ownership is shared, most engineers are in this role on
+  most features.
 - **Input (I):** Consulted but not a blocker. Community contributors, users,
-  and other maintainers provide Input via GitHub issues and PR threads.
+  and other maintainers provide Input through GitHub issues and PR threads.
 - **Decide (D):** Single accountable decision-maker for this decision type. For
   in-scope technical decisions on a feature, this is the feature owner. For
-  major architectural decisions with ecosystem impact this is the technical lead
-  on the conda-maintainers team.
+  major architectural decisions with ecosystem impact, this is the technical
+  lead on the conda-maintainers team.
 
 ## The Feature Owner Role
 
-For larger features or epics, the conda-maintainers assign a feature owner, a
-rotating conda-maintainer who is accountable for the requirements, the plan,
-and execution of that feature. The feature owner does not do all the work
+For larger features or epics, the conda-maintainers assign a feature owner: a
+rotating conda-maintainer who is accountable for that feature's requirements,
+plan, and execution. The feature owner does not do all the work
 themselves.
 
 The feature owner:
@@ -61,23 +60,22 @@ The feature owner:
 - Makes in-scope technical decisions during execution without requiring
   consensus on every choice
 
-The feature owner role rotates across conda-maintainers to build shared
-decision-making experience.
+The role rotates across conda-maintainers so that more people get experience
+making these decisions.
 
 ## Decision Tiers
 
-### Tier 1 — PR and story-level decisions
+### Tier 1: PR and story-level decisions
 
 Most changes fall here. The PR author is R, the reviewer they identified ahead
 of time is A, and the approving reviewer merges. Community members commenting on
 the PR are providing Input.
 
-Directly requesting a review from the person you previously identified to work
-with is preferred to optimize teamwork. If you paired with them during
-development, continuous review counts as this requirement. See [How We Use
-GitHub — Code Review and Merging][how-we-use-github].
+Request a review from the person you identified ahead of time to work with. If
+you paired with them during development, continuous review counts as this
+requirement. See [How We Use GitHub: Code Review and Merging][how-we-use-github].
 
-### Tier 2 — Feature-level architectural decisions
+### Tier 2: Feature-level architectural decisions
 
 Changes that affect solver behavior, plugin APIs, [deprecation schedules][cep-9],
 cross-platform behavior, or other areas with ecosystem-wide impact. The feature
@@ -87,36 +85,32 @@ decisions.
 
 ## Input vs. Agree
 
-A common failure mode in shared-ownership projects is treating every reviewer
-comment as a potential veto. The distinction matters:
+In shared-ownership projects, it is easy to treat every reviewer comment as a
+potential veto. Only the assigned reviewer holds Agree and can block a merge.
+Other commenters are providing Input. Their feedback should be considered, but
+it does not block the decision.
 
-- The assigned reviewer holds **Agree** — they can block a merge.
-- Other commenters are providing **Input** — their feedback should be
-  considered but does not block the decision.
+The feature owner synthesizes Input and decides what to act on. If the PR author
+and reviewer cannot resolve a disagreement between themselves, escalate it
+using the process below rather than leaving it open indefinitely.
 
-The feature owner is responsible for synthesizing Input and deciding what to act
-on. Disagreements that cannot be resolved between the PR author and reviewer
-should be escalated via the process below, not left open indefinitely.
-
-For review mechanics (when to use Request Changes vs. Comment), see [How We Use
-GitHub — Code Review and Merging][how-we-use-github].
+Review mechanics (when to use Request Changes instead of Comment) are covered in
+[How We Use GitHub: Code Review and Merging][how-we-use-github].
 
 ## Escalation Process
 
-Conda-maintainers follows the IETF's principle of rough consensus ([RFC
-7282][rfc7282]). This shapes how we handle disagreements: the goal is not for
-everyone to be happy, and not a majority vote. The goal is that all technical
-objections have been genuinely heard and either addressed or determined not to
-be blockers.
+Conda-maintainers follow the IETF's principle of rough consensus ([RFC
+7282][rfc7282]). The goal is not to make everyone happy, and it is not a
+majority vote. The goal is that all technical objections have been heard and
+either addressed or found not to be blockers.
 
 > "Consensus is when everyone is sufficiently satisfied with the chosen
-> solution, such that they no longer have specific objections to it." — RFC 7282
+> solution, such that they no longer have specific objections to it." (RFC 7282)
 
 Two things that are **not** rough consensus:
 
-- A minority objector simply giving up and saying "do what you want" — that is
-  capitulation, not consensus. An unaddressed technical objection is still an
-  open issue.
+- A minority objector giving up and saying "do what you want." That is
+  capitulation, and an unaddressed technical objection is still an open issue.
 - Horse-trading: "I'll drop my objection if you drop yours." This leaves both
   issues unresolved.
 
@@ -124,77 +118,78 @@ If a PR author and reviewer cannot reach agreement after good-faith discussion,
 either party may call an escalation meeting with the conda-maintainers team.
 
 > [!IMPORTANT]
-> Nothing in this process should be prioritized above the
+> Nothing in this process takes priority over the
 > [Conda Code of Conduct](https://github.com/conda/governance/blob/main/CODE_OF_CONDUCT.md).
-> If there is a conflict with the Code of Conduct, that takes precedence. If there is
-> a code of conduct concern, it must be resolved first before proceeding with the technical decision.
+> Where the two conflict, the Code of Conduct wins. Any code of conduct concern
+> must be resolved before the technical decision proceeds.
 
-### Step 1 — Reframe objections on the PR
+### Step 1: Reframe objections on the PR
 
 Before calling a meeting, the party with the objection should post a comment
-that clearly states:
+stating:
 
 - The specific technical concern (not a preference or style opinion)
 - What outcome would address it
 
-This separates genuine blockers from unappealing-but-acceptable tradeoffs. If the
-objection is that the solution is not ideal but workable, that is not a blocker
-— rough consensus has been reached.
+This separates genuine blockers from unappealing but acceptable tradeoffs. If
+the objection is that the solution is not ideal but workable, that is not a
+blocker and rough consensus has been reached.
 
-### Step 2 — Signal the impasse and start a session
+### Step 2: Signal the impasse and start a session
 
-If the objection remains unresolved after Step 1, either party adds a comment on
-the PR stating the review is at an impasse. The person calling the session opens
-a thread in `#conda-maintainers` on Zulip with:
+If the objection remains unresolved after Step 1, either party comments on the
+PR that the review is at an impasse. The person calling the session opens a
+thread in `#conda-maintainers` on Zulip with:
 
 - A link to the PR
 - A one-sentence neutral summary of the unresolved technical question
 
-A session could consist of one of the following:
+A session can be any of the following:
+
 1. A synchronous meeting via video call or chat
 2. An extended asynchronous thread in Zulip
-3. 1:1 discussions with the session chair — these gather input and count
-   toward participation, but consensus is still declared per Step 3
+3. 1:1 discussions with the session chair, which gather input and count toward
+   participation, though consensus is still declared per Step 3
 
-Tag `@conda-maintainers`. If the discussion is synchronous, make sure to coordinate
-a session time that works for the team while being considerate of global time-zones.
-The feature owner attends if the PR is part of an active feature.
+Tag `@conda-maintainers`. For a synchronous discussion, coordinate a session
+time that works for the team and takes global time zones into account. The
+feature owner attends if the PR is part of an active feature.
 
-### Step 3 — Hold the session
+### Step 3: Hold the session
 
-The session chair (typically the feature owner, or the most senior
-maintainer present) should:
+The session chair (typically the feature owner, or the most senior maintainer
+present) should:
 
-- Ask each party to state their technical objection specifically, not re-argue
-  the full history
+- Ask each party to state their technical objection specifically, without
+  re-arguing the full history
 - For each objection, ask: "Has this concern been addressed, or is it a genuine
   technical blocker?"
-- Distinguish between objections that need to be resolved and preferences that
-  can be set aside
+- Separate objections that need to be resolved from preferences that can be set
+  aside
 - Declare rough consensus when all technical blockers have been addressed, even
   if not everyone prefers the chosen solution
-- Only declare rough consensus when at least three conda-maintainers, including
-  the chair, have participated — via the session, the async thread, or a 1:1
-  with the chair
+- Declare rough consensus only when at least three conda-maintainers, including
+  the chair, have participated, whether in the session, the async thread, or a
+  1:1 with the chair
 - If fewer than three have participated, keep the question on the async
   `#conda-maintainers` thread. The chair may declare consensus no earlier than
-  7 days after the thread's initial post
+  7 days after the thread's first post
 
-With this participation floor met, the chair does not need unanimity to
-declare rough consensus. A strong majority with no unaddressed technical
-blockers is sufficient.
+Once that participation floor is met, the chair does not need unanimity. A
+strong majority with no unaddressed technical blockers is enough.
 
-### Step 4 — Record the outcome on the PR
+### Step 4: Record the outcome on the PR
 
-Whoever called the session posts a comment on the PR summarising the decision
-and the reasoning — specifically noting how any technical objections were
-addressed or why they were determined not to be blockers. The PR then proceeds
+Whoever called the session posts a comment on the PR summarizing the decision
+and the reasoning, specifically noting how any technical objections were
+addressed or why they were judged not to be blockers. The PR then proceeds
 accordingly.
 
 ## Further Reading
 
-- [conda governance][governance] — Project Team membership, voting procedures
-- [RAPID Approach][rapid] — Background on the Recommend, Agree, Perform, Input, Decide roles
-- [Contributing][contributing] — PR and code review process
-- [How We Use GitHub — Code Review and Merging][how-we-use-github] — GitHub
+- [conda governance][governance]: project team membership and voting procedures
+- [RAPID Approach][rapid]: background on the Recommend, Agree, Perform, Input,
+  and Decide roles
+- [Contributing][contributing]: PR and code review process
+- [How We Use GitHub: Code Review and Merging][how-we-use-github]: GitHub
   workflow and review requirements
