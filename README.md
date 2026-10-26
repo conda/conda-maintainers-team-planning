@@ -2,6 +2,10 @@
 
 This repo is for managing planning for the conda-maintainers team in order to capture issues and documentation across repositories that we work on.
 
+## Documentation
+
+Team documentation lives in [docs/](docs/README.md).
+
 ## conda-maintainers
 
 Maintainers of conda and related core plugins
@@ -39,10 +43,10 @@ Members that are inactive (commits, GitHub comments/issues/reviews, dev meetings
 
 ## Special Roles
 
-**Technical Lead** - Leads major architectural decisions (solver behavior, plugin APIs, deprecation schedules, cross-platform behavior). Escalation facilitator when lower level disputes can't reach rough consensus at the PR level. Must agree on feature-level technical requirements and designs before they are finalized.
+**Technical Lead** - Leads major architectural decisions (solver behavior, plugin APIs, deprecation schedules, cross-platform behavior). Escalation facilitator when lower level disputes can't reach rough consensus at the PR level. Must agree on feature-level technical requirements and designs before they are finalized. Designates an acting Technical Lead when unavailable.
 - @jezdez
 
-**Planning Lead** - Helps define the roadmap, PI objectives, and release sequencing across conda/conda-maintainers projects. Assigns and rotates Feature Owners from the members for major initiatives.
+**Planning Lead** - Helps define the roadmap, PI objectives, and release sequencing across conda/conda-maintainers projects. Assigns and rotates Feature Owners from the members for each Epic that moves from Later to Near on the Roadmap board.
 - @danyeaw
 
 ## Resources
