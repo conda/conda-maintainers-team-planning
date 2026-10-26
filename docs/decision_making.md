@@ -50,7 +50,8 @@ decision needs consensus from everyone.
 
 The Technical Lead is a named role held by one conda-maintainer. The
 team README lists who currently holds it. The Technical Lead holds Agree for
-Tier 2 feature-level architectural decisions and chairs escalation sessions.
+Tier 2 feature-level architectural decisions, chairs escalation sessions, and
+decides blockers that stay open past the Step 3 time box.
 When the Technical Lead is unavailable, they designate an acting Technical Lead
 in the PR or the Zulip thread before the session starts.
 
@@ -204,11 +205,16 @@ The chair should:
 Once that participation floor is met, the chair does not need unanimity. A
 strong majority with no unaddressed technical blockers is enough.
 
+If a technical blocker is still open 14 days after the escalation thread's first
+post, the Technical Lead decides the question and overrides the open objection.
+Step 4 records the decision and the objection.
+
 ### Step 4: Record the outcome on the PR
 
 Whoever called the session posts a comment on the PR summarizing the decision
 and the reasoning, specifically noting how any technical objections were
-addressed or why they were judged not to be blockers. The PR then proceeds
+addressed or why they were judged not to be blockers. If the Technical Lead
+overrode an open objection, then that is included as well. The PR then proceeds
 accordingly.
 
 ## Further reading
