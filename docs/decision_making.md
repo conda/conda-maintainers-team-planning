@@ -1,5 +1,4 @@
 [governance]: https://github.com/conda/governance
-[rapid]: https://cio-wiki.org/wiki/RAPID_Approach
 [rfc7282]: https://www.rfc-editor.org/rfc/rfc7282
 [project-roadmap]: https://github.com/orgs/conda/projects/22/views/15
 [cep-9]: https://github.com/conda/ceps/blob/main/cep-0009.md
@@ -19,41 +18,23 @@ repositories they maintain, including conda. Conda Organization governance
 
 ## Principles
 
-The conda-maintainers use a lightweight version of the [RAPID framework][rapid].
-Every significant decision gets a named owner, a small set of people who must
-agree before it proceeds, and a set of people whose input is sought but who
-cannot block it.
+The conda-maintainers make decisions through rough consensus. Every significant
+decision has a named owner who drives it and builds consensus among the
+maintainers before it stands. Community members give input along the way.
 
 Everyone can contribute anywhere in a shared codebase. That does not mean every
 decision needs consensus from everyone.
 
 ## Roles
 
-- **Recommend (R):** Investigates the problem, proposes the solution, and
-  drives the plan. For features, this is the feature owner. For smaller changes,
-  this is the PR author.
-- **Agree (A):** Must approve before the decision is final. For PRs, this is
-  an approving maintainer reviewer, preferably someone the PR author worked with
-  during development. Keep this group small. Other commenters on a PR are giving
-  Input, not Agree.
-- **Perform (P):** Executes the decision. Often the whole team or a subset of
-  contributors. Because ownership is shared, most engineers are in this role on
-  most features.
-- **Input (I):** Consulted but not a blocker. Community contributors, users,
-  and other maintainers provide Input through GitHub issues and PR threads.
-- **Decide (D):** Single accountable decision-maker for this decision type. For
-  in-scope technical decisions on a feature, this is the feature owner. For
-  major architectural decisions with ecosystem impact, this is the Technical
-  Lead.
-
-## The Technical Lead role
-
-The Technical Lead is a named role held by one conda-maintainer. The
-team README lists who currently holds it. The Technical Lead holds Agree for
-Tier 2 feature-level architectural decisions, chairs escalation sessions, and
-decides blockers that stay open past the Step 3 time box.
-When the Technical Lead is unavailable, they designate an acting Technical Lead
-in the PR or the Zulip thread before the session starts.
+- **Feature Owner:** Owns an Epic from requirements through execution and builds
+  rough consensus for its decisions.
+- **PR author:** Proposes and implements the change.
+- **PR reviewer:** Reviews the change and merges it once the review passes.
+- **Maintainer:** Participates in review and consensus, and may raise a technical
+  blocker.
+- **Contributor or community member:** Gives input through issues and PR threads
+  but does not block a decision.
 
 ## The feature owner role
 
@@ -63,11 +44,11 @@ and execution. The feature owner does not do all the work themselves.
 
 The feature owner:
 
-- Holds R and D for the duration of the Epic
-- Opens and drives the GitHub issue discussion to gather community Input before
+- Owns the Epic's requirements, plan, and execution
+- Opens and drives the GitHub issue discussion to gather community input before
   work begins
-- Makes in-scope technical decisions during execution without requiring
-  consensus on every choice
+- Makes the Epic's technical decisions through rough consensus; proposals stand
+  under the 7-day window in Decision tiers
 
 The role rotates across conda-maintainers so that more people get experience
 making these decisions.
@@ -94,9 +75,8 @@ GitHub issue.
 
 ### Tier 1: PR and story-level decisions
 
-Most changes fall here. The PR author is R, an approving maintainer reviewer is
-A, and that reviewer merges. Community members commenting on the PR are
-providing Input.
+Most changes fall here. A maintainer reviews the PR, approves it, and merges it.
+Community members commenting on the PR are providing input.
 
 Request a review from a maintainer, preferably the person you worked with during
 development. See [Development Process][development-process] for the review
@@ -106,18 +86,19 @@ rules.
 
 Changes that affect solver behavior, plugin APIs, [deprecation schedules][cep-9],
 cross-platform behavior, or other areas with ecosystem-wide impact. The feature
-owner is R, affected community tool authors and maintainers are I, the
-Technical Lead is A on PRs, and the feature owner is D for implementation
-decisions.
+owner proposes the decision; affected community tool authors and maintainers
+give input. The proposal stands after 7 days with no unaddressed technical
+blocker from a participating maintainer, and the assigned reviewer merges the
+PR.
 
-## Input vs. agree
+## Input and blockers
 
 In shared-ownership projects, it is easy to treat every reviewer comment as a
-potential veto. Only the assigned reviewer holds Agree and can block a merge.
-Other commenters are providing Input. Their feedback should be considered, but
-it does not block the decision.
+potential veto. Any participating maintainer may raise a technical blocker.
+Community members and other commenters give input. Their feedback should be
+considered, but it does not block the decision.
 
-The feature owner synthesizes Input and decides what to act on. If the PR author
+The feature owner synthesizes input and decides what to act on. If the PR author
 and reviewer cannot resolve a disagreement between themselves, escalate it
 using the process below rather than leaving it open indefinitely.
 
@@ -175,17 +156,14 @@ A session can be any of the following:
 
 1. A synchronous meeting via video call or chat
 2. An extended asynchronous thread in Zulip
-3. 1:1 discussions with the session chair, which gather input and count toward
-   participation, though consensus is still declared per Step 3
 
 Tag `@conda-maintainers`. For a synchronous discussion, coordinate a session
 time that works for the team and takes global time zones into account.
 
 ### Step 3: Hold the session
 
-The session chair is the Technical Lead, or the acting Technical Lead they
-designated. The feature owner attends if the PR is part of an active feature.
-The chair should:
+The feature owner attends if the PR is part of an active feature. The session
+caller facilitates and should:
 
 - Ask each party to state their technical objection specifically, without
   re-arguing the full history
@@ -196,32 +174,30 @@ The chair should:
 - Declare rough consensus when all technical blockers have been addressed, even
   if not everyone prefers the chosen solution
 - Declare rough consensus only when at least three conda-maintainers, including
-  the chair, have participated, whether in the session, the async thread, or a
-  1:1 with the chair
+  the session caller, have participated, whether in the session or the async
+  thread
 - If fewer than three have participated, keep the question on the async
-  `#conda-maintainers` thread. The chair may declare consensus no earlier than
-  7 days after the thread's first post
+  `#conda-maintainers` thread. The session caller may declare consensus no
+  earlier than 7 days after the thread's first post
 
-Once that participation floor is met, the chair does not need unanimity. A
-strong majority with no unaddressed technical blockers is enough.
+Once that participation floor is met, the session caller does not need
+unanimity. A strong majority with no unaddressed technical blockers is enough.
 
 If a technical blocker is still open 14 days after the escalation thread's first
-post, the Technical Lead decides the question and overrides the open objection.
-Step 4 records the decision and the objection.
+post, the contested change pauses and is not merged. The feature owner may split
+off uncontested parts or run a spike to answer the open question. Step 4 records
+the open objection.
 
 ### Step 4: Record the outcome on the PR
 
 Whoever called the session posts a comment on the PR summarizing the decision
 and the reasoning, specifically noting how any technical objections were
-addressed or why they were judged not to be blockers. If the Technical Lead
-overrode an open objection, then that is included as well. The PR then proceeds
-accordingly.
+addressed or why they were judged not to be blockers. If a technical blocker is
+still open, that is recorded as well. Otherwise the PR proceeds.
 
 ## Further reading
 
 - [conda governance][governance]: project team membership and voting procedures
-- [RAPID Approach][rapid]: background on the Recommend, Agree, Perform, Input,
-  and Decide roles
 - [Contributing][contributing]: PR and code review process
 - [Development Process][development-process]: issue sorting, labeling, and code
   review and merging
