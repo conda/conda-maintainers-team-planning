@@ -85,12 +85,15 @@ rules.
 
 ### Tier 2: Feature-level architectural decisions
 
-Changes that affect solver behavior, plugin APIs, [deprecation schedules][cep-9],
-cross-platform behavior, or other areas with ecosystem-wide impact. The feature
-owner proposes the decision; affected community tool authors and maintainers
-give input. The proposal stands after 7 days with no unaddressed technical
-blocker from a participating maintainer, and the assigned reviewer merges the
-PR.
+Changes that alter a contract other projects rely on rather than a behavior:
+backwards-incompatible changes and [deprecation schedules][cep-9], public APIs
+including plugin APIs, support commitments such as supported platforms and
+dependency floors, and shared architecture that the ecosystem builds on. Routine
+bug fixes, performance work, and platform-specific fixes stay Tier 1 even when
+they touch the solver or a public API. The feature owner proposes the decision;
+affected community tool authors and maintainers give input. The proposal stands
+after 7 days with no unaddressed technical blocker from a participating
+maintainer, and the assigned reviewer merges the PR.
 
 ## Input and blockers
 
