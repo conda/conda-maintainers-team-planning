@@ -20,15 +20,16 @@ repositories they maintain, including conda. Conda Organization governance
 
 The conda-maintainers make decisions through rough consensus. Every significant
 decision has a named owner who drives it and builds consensus among the
-maintainers before it stands. Community members give input along the way.
+maintainers before it stands. The feature owner proposes the decision; the
+maintainers decide it. Community members give input along the way.
 
 Everyone can contribute anywhere in a shared codebase. That does not mean every
 decision needs consensus from everyone.
 
 ## Roles
 
-- **Feature Owner:** Owns an Epic from requirements through execution and builds
-  rough consensus for its decisions.
+- **Feature Owner:** Owns an Epic's sequencing and end-to-end experience and
+  builds rough consensus for its decisions.
 - **PR author:** Proposes and implements the change.
 - **PR reviewer:** Reviews the change and merges it once the review passes.
 - **Maintainer:** Participates in review and consensus, and may raise a technical
@@ -39,16 +40,17 @@ decision needs consensus from everyone.
 ## The feature owner role
 
 Each Epic that reaches Near on the Roadmap board is assigned a feature owner: a
-rotating conda-maintainer who is accountable for that Epic's requirements, plan,
-and execution. The feature owner does not do all the work themselves.
+rotating conda-maintainer who is accountable for that Epic's sequencing and
+end-to-end experience. The feature owner does not do all the work themselves.
 
 The feature owner:
 
-- Owns the Epic's requirements, plan, and execution
+- Sequences the Epic's work into shippable slices and keeps the pieces coherent
+  as a whole
 - Opens and drives the GitHub issue discussion to gather community input before
   work begins
-- Makes the Epic's technical decisions through rough consensus; proposals stand
-  under the 7-day window in Decision tiers
+- Proposes the Epic's technical decisions and carries them to rough consensus;
+  proposals stand under the 7-day window in Decision tiers
 
 The role rotates across conda-maintainers so that more people get experience
 making these decisions.
@@ -66,8 +68,7 @@ GitHub issue.
 2. Any conda-maintainer can volunteer by commenting on the Epic within five
    business days.
 3. If several people volunteer, the Planning Lead picks the one who has led the
-   fewest Epics recently. If nobody volunteers, the Planning Lead assigns a
-   conda-maintainer directly, using the same rule.
+   fewest Epics recently.
 4. The Planning Lead sets the feature owner as the Epic's assignee. The feature
    owner confirms by commenting on the Epic.
 
@@ -98,9 +99,9 @@ potential veto. Any participating maintainer may raise a technical blocker.
 Community members and other commenters give input. Their feedback should be
 considered, but it does not block the decision.
 
-The feature owner synthesizes input and decides what to act on. If the PR author
-and reviewer cannot resolve a disagreement between themselves, escalate it
-using the process below rather than leaving it open indefinitely.
+The feature owner weighs the input and decides what to fold into the proposal.
+If the PR author and reviewer cannot resolve a disagreement between themselves,
+escalate it using the process below rather than leaving it open indefinitely.
 
 Review mechanics (when to use Request Changes instead of Comment) are covered in
 [Development Process][development-process].
@@ -162,8 +163,9 @@ time that works for the team and takes global time zones into account.
 
 ### Step 3: Hold the session
 
-The feature owner attends if the PR is part of an active feature. The session
-caller facilitates and should:
+The feature owner presents the proposal if the PR is part of an active feature,
+and does not call or facilitate the session. The session caller facilitates and
+should:
 
 - Ask each party to state their technical objection specifically, without
   re-arguing the full history
