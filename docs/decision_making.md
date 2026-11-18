@@ -23,8 +23,8 @@ decision has a named owner who drives it and builds consensus among the
 maintainers before it stands. The feature owner proposes the decision; the
 maintainers decide it. Community members give input along the way.
 
-Everyone can contribute anywhere in a shared codebase. That does not mean every
-decision needs consensus from everyone.
+Everyone can contribute anywhere in a shared codebase, but not every decision
+needs consensus from everyone.
 
 ## Roles
 
@@ -46,7 +46,6 @@ end-to-end experience. The feature owner does not do all the work themselves.
 The feature owner:
 
 - Sequences the Epic's work into shippable slices and keeps the pieces coherent
-  as a whole
 - Opens and drives the GitHub issue discussion to gather community input before
   work begins
 - Proposes the Epic's technical decisions and carries them to rough consensus;
@@ -90,17 +89,19 @@ backwards-incompatible changes and [deprecation schedules][cep-9], public APIs
 including plugin APIs, support commitments such as supported platforms and
 dependency floors, and shared architecture that the ecosystem builds on. Routine
 bug fixes, performance work, and platform-specific fixes stay Tier 1 even when
-they touch the solver or a public API. The feature owner proposes the decision;
-affected community tool authors and maintainers give input. The proposal stands
-after 7 days with no unaddressed technical blocker from a participating
-maintainer, and the assigned reviewer merges the PR.
+they touch the solver or a public API.
+
+The feature owner proposes the decision; affected community tool authors and
+maintainers give input. The proposal stands after 7 days with no unaddressed
+technical blocker from a participating maintainer, and the assigned reviewer
+merges the PR.
 
 ## Input and blockers
 
 In shared-ownership projects, it is easy to treat every reviewer comment as a
 potential veto. Any participating maintainer may raise a technical blocker.
-Community members and other commenters give input. Their feedback should be
-considered, but it does not block the decision.
+Community members and other commenters provide feedback, which should be
+considered but does not block the decision.
 
 The feature owner weighs the input and decides what to fold into the proposal.
 If the PR author and reviewer cannot resolve a disagreement between themselves,
@@ -119,7 +120,7 @@ addressed or found not to be a blocker.
 > "Consensus is when everyone is sufficiently satisfied with the chosen
 > solution, such that they no longer have specific objections to it." (RFC 7282)
 
-Two things that are **not** rough consensus:
+Two things that are not rough consensus:
 
 - A minority objector giving up and saying "do what you want." That is
   capitulation, and an unaddressed technical objection is still an open issue.
@@ -143,9 +144,8 @@ stating:
 - The specific technical concern (not a preference or style opinion)
 - What outcome would address it
 
-This separates genuine blockers from unappealing but acceptable tradeoffs. If
-the objection is that the solution is not ideal but workable, that is not a
-blocker and rough consensus has been reached.
+If the solution is not ideal but workable, that is not a blocker and rough
+consensus has been reached.
 
 ### Step 2: Signal the impasse and start a session
 
@@ -176,11 +176,10 @@ should:
   technical blocker?"
 - Separate objections that need to be resolved from preferences that can be set
   aside
-- Declare rough consensus when all technical blockers have been addressed, even
-  if not everyone prefers the chosen solution
-- Declare rough consensus only when at least three conda-maintainers, including
-  the session caller, have participated, whether in the session or the async
-  thread
+- Declare rough consensus when all technical blockers have been addressed and
+  at least three conda-maintainers, including the session caller, have
+  participated in the session or the async thread, even if not everyone prefers
+  the chosen solution
 - If fewer than three have participated, keep the question on the async
   `#conda-maintainers` thread. The session caller may declare consensus no
   earlier than 14 days after the thread's first post
