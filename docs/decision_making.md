@@ -36,11 +36,16 @@ needs consensus from everyone.
   blocker.
 - **Contributor or community member:** Gives input through issues and PR threads
   but does not block a decision.
+- **Planning Lead:** Assigns feature owners for Epics that reach Near on the
+  Roadmap board.
+
+A maintainer counts as participating in a decision once they have reviewed the
+PR or joined the discussion.
 
 ## The feature owner role
 
-Each Epic that reaches Near on the Roadmap board is assigned a feature owner: a
-rotating conda-maintainer who is accountable for that Epic's sequencing and
+When an Epic reaches Near on the Roadmap board, a rotating conda-maintainer
+volunteers as its feature owner, accountable for that Epic's sequencing and
 end-to-end experience. The feature owner does not do all the work themselves.
 
 The feature owner:
@@ -49,7 +54,7 @@ The feature owner:
 - Opens and drives the GitHub issue discussion to gather community input before
   work begins
 - Proposes the Epic's technical decisions and carries them to rough consensus;
-  proposals stand under the 7-day window in Decision tiers
+  Tier 2 proposals stand after the 7-day window in Decision tiers
 
 The role rotates across conda-maintainers so that more people get experience
 making these decisions.
@@ -68,8 +73,10 @@ GitHub issue.
    business days.
 3. If several people volunteer, the Planning Lead picks the one who has led the
    fewest Epics recently.
-4. The Planning Lead sets the feature owner as the Epic's assignee. The feature
-   owner confirms by commenting on the Epic.
+4. The Planning Lead sets the chosen volunteer as the Epic's assignee, and the
+   new feature owner confirms by commenting on the Epic.
+5. If nobody volunteers, the Epic stays in Near with no feature owner, and the
+   Planning Lead raises it at the next conda-maintainers meeting.
 
 ## Decision tiers
 
@@ -84,17 +91,17 @@ rules.
 
 ### Tier 2: Feature-level architectural decisions
 
-Changes that alter a contract other projects rely on rather than a behavior:
+Tier 2 covers changes that alter a contract other projects rely on:
 backwards-incompatible changes and [deprecation schedules][cep-9], public APIs
 including plugin APIs, support commitments such as supported platforms and
 dependency floors, and shared architecture that the ecosystem builds on. Routine
 bug fixes, performance work, and platform-specific fixes stay Tier 1 even when
-they touch the solver or a public API.
+they touch the solver or a public API, because they keep those contracts intact.
 
-The feature owner proposes the decision; affected community tool authors and
-maintainers give input. The proposal stands after 7 days with no unaddressed
-technical blocker from a participating maintainer, and the assigned reviewer
-merges the PR.
+The feature owner proposes the decision, or the PR author does when the change
+is not part of an Epic. Affected community tool authors and maintainers give
+input. The proposal stands after 7 days with no unaddressed technical blocker
+from a participating maintainer, and the assigned reviewer merges the PR.
 
 ## Input and blockers
 
@@ -103,9 +110,10 @@ potential veto. Any participating maintainer may raise a technical blocker.
 Community members and other commenters provide feedback, which should be
 considered but does not block the decision.
 
-The feature owner weighs the input and decides what to fold into the proposal.
-If the PR author and reviewer cannot resolve a disagreement between themselves,
-escalate it using the process below rather than leaving it open indefinitely.
+The feature owner weighs the input and decides what to fold into the proposal
+for Epic work. In Tier 1, the reviewer decides whether the PR merges. If the PR
+author and reviewer cannot resolve a disagreement between themselves, escalate
+it using the process below rather than leaving it open indefinitely.
 
 Review mechanics (when to use Request Changes instead of Comment) are covered in
 [Development Process][development-process].
@@ -167,8 +175,9 @@ time that works for the team and takes global time zones into account.
 ### Step 3: Hold the session
 
 The feature owner presents the proposal if the PR is part of an active feature,
-and does not call or facilitate the session. The session caller facilitates and
-should:
+and does not call or facilitate the session. If the feature owner is the PR
+author or the reviewer, another conda-maintainer calls and facilitates the
+session instead. The session caller should:
 
 - Ask each party to state their technical objection specifically, without
   re-arguing the full history
@@ -181,11 +190,7 @@ should:
   participated in the session or the async thread, even if not everyone prefers
   the chosen solution
 - If fewer than three have participated, keep the question on the async
-  `#conda-maintainers` thread. The session caller may declare consensus no
-  earlier than 14 days after the thread's first post
-
-Once that participation floor is met, the session caller does not need
-unanimity. A strong majority with no unaddressed technical blockers is enough.
+  `#conda-maintainers` thread until a third maintainer joins
 
 If a technical blocker is still open 14 days after the escalation thread's first
 post, the contested change pauses and is not merged. The feature owner may split
