@@ -36,8 +36,8 @@ needs consensus from everyone.
   blocker.
 - **Contributor or community member:** Gives input through issues and PR threads
   but does not block a decision.
-- **Planning Lead:** Assigns feature owners for Epics that reach Near on the
-  Roadmap board.
+- **Planning Lead:** Works to get volunteers to take over as feature owners for
+  Epics that reach Near on the Roadmap board.
 
 A maintainer counts as participating in a decision once they have reviewed the
 PR or joined the discussion.
