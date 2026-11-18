@@ -183,7 +183,7 @@ should:
   thread
 - If fewer than three have participated, keep the question on the async
   `#conda-maintainers` thread. The session caller may declare consensus no
-  earlier than 7 days after the thread's first post
+  earlier than 14 days after the thread's first post
 
 Once that participation floor is met, the session caller does not need
 unanimity. A strong majority with no unaddressed technical blockers is enough.
